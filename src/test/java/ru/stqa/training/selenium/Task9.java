@@ -1,3 +1,14 @@
+/*Задание 9. Проверить сортировку стран и геозон в админке
+
+Сделайте сценарии, которые проверяют сортировку стран и геозон (штатов) в учебном приложении litecart.
+
+Test1) на странице http://localhost/litecart/admin/?app=countries&doc=countries
+а) проверить, что страны расположены в алфавитном порядке
+б) для тех стран, у которых количество зон отлично от нуля -- открыть страницу этой страны и там проверить, что зоны расположены в алфавитном порядке
+
+ Test2) на странице http://localhost/litecart/admin/?app=geo_zones&doc=geo_zones
+ зайти в каждую из стран и проверить, что зоны расположены в алфавитном порядке */
+
 package ru.stqa.training.selenium;
 
 import org.junit.After;
@@ -9,21 +20,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.concurrent.TimeUnit;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
-
+import java.util.*;
 import static org.junit.Assert.*;
-import static org.openqa.selenium.support.ui.ExpectedConditions.titleIs;
-
-
 
 
 public class Task9 {
+
+    private WebDriver driver;
 
     private Boolean isListOrdered (List<String> stringList) {
         String previous = ""; // empty string: guaranteed to be less than or equal to any other
@@ -36,9 +40,6 @@ public class Task9 {
         return true;
     }
 
-    private WebDriver driver;
-    private WebDriverWait wait;
-
     @Before
     public void start() {
         driver = new ChromeDriver();
@@ -46,7 +47,7 @@ public class Task9 {
     }
 
     @Test
-    public void myFirstTest() {
+    public void Test1() {
         driver.get("http://localhost/litecart/admin/?app=countries&doc=countries");
         driver.findElement(By.name("username")).sendKeys("admin");
         driver.findElement(By.name("password")).sendKeys("admin");
@@ -61,7 +62,6 @@ public class Task9 {
         for (WebElement row : countries) {
             WebElement country = row.findElement(By.cssSelector("td:nth-child(5) a"));
             countriesNames.add(country.getText());
-
             Integer zones = Integer.parseInt(row.findElement(By.cssSelector("td:nth-child(6)")).getText());
             if (zones > 0) {
                 zonesForCheck.add(i);
@@ -87,11 +87,33 @@ public class Task9 {
         }
     }
 
+    @Test
+    public void Test2() {
+        driver.get("http://localhost/litecart/admin/?app=geo_zones&doc=geo_zones");
+        driver.findElement(By.name("username")).sendKeys("admin");
+        driver.findElement(By.name("password")).sendKeys("admin");
+        driver.findElement(By.name("login")).click();
+        driver.findElement(By.id("platform"));
+
+        Integer countriesToCheck = driver.findElements(By.cssSelector(".dataTable tr:not(.header):not(.footer)")).size();
+
+        for (int i  = 0; i < countriesToCheck; i++) {
+            WebElement country = driver.findElements(By.cssSelector(".dataTable tr:not(.header):not(.footer)")).get(i);
+            country.findElement(By.cssSelector("td:nth-child(3) a")).click();
+
+            List<WebElement> zones = driver.findElements(By.cssSelector(".dataTable tr:not(.header) td:nth-child(3) [selected=selected"));
+            List<String> zonesNames = new ArrayList<>();
+            zones.forEach(zn -> zonesNames.add(zn.getText()));
+
+            assertTrue("Zones are ordered", isListOrdered(zonesNames));
+
+            driver.navigate().back();
+        }
+    }
+
     @After
     public void stop() {
         driver.quit();
         driver = null;
     }
-
-
 }

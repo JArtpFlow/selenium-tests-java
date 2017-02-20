@@ -9,7 +9,7 @@
         <module name="seleniumtests" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="1.8">
       <module name="seleniumtests" target="1.8" />
     </bytecodeTargetLevel>
   </component>

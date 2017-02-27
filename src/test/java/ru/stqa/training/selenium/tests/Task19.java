@@ -13,5 +13,5 @@ public class Task19 extends TestBase {
         app.removeEachProductFromCart();
         app.checkCartIsEmpty();
     }
-    
+
 }

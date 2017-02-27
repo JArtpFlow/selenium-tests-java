@@ -27,7 +27,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
-import java.util.concurrent.TimeUnit;
+
 
 public class Task13 {
     private WebDriver driver;
@@ -77,7 +77,6 @@ public class Task13 {
     @Before
     public void start () {
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         wait = new WebDriverWait(driver, 5);
     }
 

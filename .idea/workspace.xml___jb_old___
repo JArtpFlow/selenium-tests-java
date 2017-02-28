@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="83399398-de02-4e5b-91d0-b88143d7a393" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/Task13.java" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/Task13.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/tests/Task19.java" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/tests/Task19.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -20,7 +21,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Task13.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Task13.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/Task13.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
@@ -47,7 +48,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Task19.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Task19.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/tests/Task19.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
@@ -443,7 +444,7 @@
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/java" />
     <property name="extract.method.default.visibility" value="private" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.Task13">
     <configuration default="false" name="Task10" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -787,8 +788,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.Task19" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.Task13" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.Task13" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.Task19" />
         <item index="2" class="java.lang.String" itemvalue="JUnit.Task12" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.Task11" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.Task10" />
@@ -1220,6 +1221,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/tests/Task19.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/Task13.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -1228,14 +1237,6 @@
             <element signature="e#0#4583#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/tests/Task19.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>

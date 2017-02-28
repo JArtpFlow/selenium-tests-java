@@ -24,12 +24,10 @@ import java.util.concurrent.TimeUnit;
 
 public class Task17 {
     private WebDriver driver;
-    private WebDriverWait wait;
 
     @Before
     public void start () {
         driver = new ChromeDriver();
-        wait = new WebDriverWait(driver, 5);
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
     }
 
